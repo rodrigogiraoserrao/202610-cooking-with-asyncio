@@ -14,4 +14,3 @@ async def lunch_prep():
 
 if __name__ == "__main__":
     asyncio.run(lunch_prep())
-    # trio
