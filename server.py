@@ -3,6 +3,7 @@ import asyncio
 
 class Server:
     def __init__(self, host, port):
+        print("Initialising server.")
         self.host = host
         self.port = port
 
@@ -12,9 +13,10 @@ class Server:
         Contains an infinite loop that reads data from the reader
         and sends it back to the writer.
         """
+        print("Connection received!")
         while True:
             data = await reader.readline()
-            print(f"Server got {data = }.")
+            print(f"\tServer got {data = }.")
             writer.write(data)
 
     async def run(self):
@@ -23,6 +25,7 @@ class Server:
         Initialises an `asyncio` server with the attributes passed earlier
         and then uses the method `server_forever` to listen for connections.
         """
+        print("Starting server...")
         server = asyncio.start_server(
             self.connection_callback,  # server logic
             self.host,                 # host
