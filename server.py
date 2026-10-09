@@ -26,7 +26,7 @@ class Server:
         and then uses the method `server_forever` to listen for connections.
         """
         print("Starting server...")
-        server = asyncio.start_server(
+        server = await asyncio.start_server(
             self.connection_callback,  # server logic
             self.host,                 # host
             self.port,                 # port
