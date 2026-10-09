@@ -9,8 +9,8 @@ async def lunch_prep():
         async_microwave(Meatloaf()),
         async_cook(Pasta()),
     )
-    (pasta, meatloaf) = await gathered_tasks
-    serve_food(pasta, meatloaf)
+    (meatloaf, pasta) = await gathered_tasks
+    serve_food(meatloaf, pasta)
 
 if __name__ == "__main__":
     asyncio.run(lunch_prep())
