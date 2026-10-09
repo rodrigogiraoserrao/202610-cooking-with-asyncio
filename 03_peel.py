@@ -8,10 +8,10 @@ async def async_peel_and_slice(food):
 
 async def lunch_prep():
     put_on_apron()
-    (meatloaf, pasta, avocado) = await asyncio.gather(
+    (avocado, meatloaf, pasta) = await asyncio.gather(
+        async_peel_and_slice(Avocado()),
         async_microwave(Meatloaf()),
         async_cook(Pasta()),
-        async_peel_and_slice(Avocado()),
     )
     serve_food(avocado, meatloaf, pasta)
 
