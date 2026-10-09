@@ -1,3 +1,5 @@
+import asyncio
+
 from kitchenkit import *
 from kitchenkit.prep import async_cook, async_microwave
 
@@ -8,4 +10,4 @@ async def lunch_prep():
     serve_food(pasta, meatloaf)
 
 if __name__ == "__main__":
-    lunch_prep()
+    asyncio.run(lunch_prep())
