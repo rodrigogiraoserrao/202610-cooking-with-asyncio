@@ -1,3 +1,6 @@
+from kitchenkit import *
+from kitchenkit.prep import cook, microwave
+
 def lunch_prep():
     put_on_apron()
     meatloaf = microwave(Meatloaf())
