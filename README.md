@@ -10,6 +10,22 @@ To run code:
 
 ---
 
+Create venv w/ uv:
+
+```bash
+% uv venv
+% uv pip install kitchenkit
+% uv run 04_to_thread.py
+```
+
+W/o uv:
+
+```bash
+
+```
+
+---
+
 1. The smarter person managing me is the **event loop**.
 
 2. Async code is still **single-threaded**.
