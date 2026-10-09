@@ -12,7 +12,10 @@ class Server:
         Contains an infinite loop that reads data from the reader
         and sends it back to the writer.
         """
-        ?????
+        while True:
+            data = await reader.readline()
+            print(f"Server got {data = }.")
+            writer.write(data)
 
     async def run(self):
         """Creates and runs the `asyncio` server.
