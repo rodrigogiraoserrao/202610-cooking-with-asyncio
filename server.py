@@ -3,7 +3,8 @@ import asyncio
 
 class Server:
     def __init__(self, host, port):
-        ...
+        self.host = host
+        self.port = port
 
     async def connection_callback(self, reader, writer):
         """Implements an echo server.
@@ -18,7 +19,11 @@ class Server:
         Initialises an `asyncio` server with the attributes passed earlier
         and then uses the method `server_forever` to listen for connections.
         """
-        ...
+        server = asyncio.start_server(
+            server_logic,
+            self.host,
+            self.port,
+        )
         await server.serve_forever()
 
 
