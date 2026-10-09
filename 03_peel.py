@@ -1,11 +1,11 @@
 import asyncio
 
 from kitchenkit import *
-from kitchenkit.prep import async_cook, async_microwave
+from kitchenkit.prep import async_cook, async_microwave, peel_and_slice
 
 async def lunch_prep():
     put_on_apron()
-    # async code execution shines when tasks are I/O-bound
+    avocado = peel_and_slice(Avocado())
     (meatloaf, pasta) = await asyncio.gather(
         async_microwave(Meatloaf()),
         async_cook(Pasta()),
