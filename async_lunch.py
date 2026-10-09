@@ -1,5 +1,5 @@
 from kitchenkit import *
-from kitchenkit.prep import cook
+from kitchenkit.prep import async_cook, async_microwave
 
 def lunch_prep():
     put_on_apron()
