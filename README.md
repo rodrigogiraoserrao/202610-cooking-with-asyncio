@@ -8,5 +8,10 @@ To run code:
 
  2. You can install the dependency `kitchenkit` in a virtual environment and then run the code.
 
+---
 
-The smarter person managing me is the **event loop**.
+1. The smarter person managing me is the **event loop**.
+
+2. Async code is still **single-threaded**.
+
+3. The work to be done (tasks) need to be async-aware.
