@@ -3,6 +3,9 @@ import asyncio
 from kitchenkit import *
 from kitchenkit.prep import async_cook, async_microwave, peel_and_slice
 
+async def async_peel_and_slice(food):
+    return peel_and_slice(food)
+
 async def lunch_prep():
     put_on_apron()
     (meatloaf, pasta) = await asyncio.gather(
