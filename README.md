@@ -21,7 +21,12 @@ Create venv w/ uv:
 W/o uv:
 
 ```bash
-
+% python -m venv .venv
+% python -m pip install kitchenkit
+# Activate your virtual environment now...
+# On MacOS/Linux you run `source .venv/bin/activate`
+# On Windows, I don't know 😅
+(.venv) % python 04_to_thread.py
 ```
 
 ---
